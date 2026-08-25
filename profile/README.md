@@ -6,6 +6,14 @@
 
 Green Cinnamon Labs is a home for projects that begin as research questions and grow through working software. Repositories live here when they are meant to become shared environments rather than remain attached to a single author: documented experiments, reusable tools, and collaborative systems developed in public.
 
+## Why "Green Cinnamon"?
+
+In Portuguese, *canela* means both **cinnamon** and **shin**. The name is a deliberate wordplay on *canelas-verdes*, the traditional nickname associated with people from Vila Velha, Espírito Santo, Brazil.
+
+One widely repeated version of the local story traces the nickname to people wading ashore through the shallow water, algae, and mud around Prainha: they returned with green-stained shins. Other versions connect it to Indigenous inhabitants, fishermen and shellfish gatherers, or green garments worn by early Portuguese arrivals. The story has variants; the image remains part of Vila Velha's cultural identity.
+
+The leg icon keeps that wordplay visible. **Don't avoid the mud** turns it into the lab's working principle: meaningful progress rarely begins on clean, prepared ground. We choose to enter difficult terrain, understand it, and build a way through it.
+
 ## What we explore
 
 - **Dynamic systems and simulation** - deterministic runtimes, numerical integration, and composable process models.
