@@ -29,7 +29,7 @@ Each line has a hub, a `spec-*` repository named after a figure whose story mirr
 
 ### The shared plant
 
-Hefesto, Monjolo and Gajeiro all run on the same simulated plant: the Tennessee Eastman process (Downs and Vogel, 1993), rewritten in Rust. [`spec-tennessee-eastman`](https://github.com/Green-Cinnamon-Labs/spec-tennessee-eastman) records how that system was built and is the common reference for the three lines.
+Hefesto, Monjolo and Gajeiro all run on the same simulated plant: the Tennessee Eastman process (Downs and Vogel, 1993), rewritten in Rust. [`spec-tennessee-eastman`](https://github.com/Batchuka/spec-tennessee-eastman) records how that system was built and is the common reference for the three lines.
 
 All work is tracked on one board, [GCLabs](https://github.com/orgs/Green-Cinnamon-Labs/projects/12), with a *Line* field.
 
