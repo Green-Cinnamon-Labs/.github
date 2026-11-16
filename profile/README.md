@@ -21,51 +21,31 @@ The leg icon keeps that wordplay visible. **Don't avoid the mud** turns it into 
 - **Distributed and cloud-native control** - Kubernetes operators, declarative policies, and event-driven architectures.
 - **Experimental computing** - persistent model memory, scientific notebooks, and reproducible technical research.
 
-## Featured work
+## Research lines
 
-### [monjolo](https://github.com/Green-Cinnamon-Labs/monjolo) - deterministic process simulation
+Each line has a hub, a `spec-*` repository named after a figure whose story mirrors what the line does. The hub holds what the line knows today, its book and the issues that span repositories. Lines are allowed to cross and to draw from the same sources.
 
-An open-source Rust runtime for continuous dynamic process simulation. It provides composable dynamic models, RK4 integration, reusable sensor and actuator blocks, supervised execution, and an optional OPC-UA adapter. Monjolo was extracted from the Tennessee Eastman work so that the simulation machinery could evolve independently and be reused in other domains.
+| Line | Hub | What it explores | Repositories |
+|---|---|---|---|
+| **Pítia** | [`spec-pitia`](https://github.com/Green-Cinnamon-Labs/spec-pitia) | Quantum computing: how quantum computers work, physical implementations, error correction, the problems they are expected to solve; following arXiv | the notebooks live in the hub |
+| **Mnemósine** | [`spec-mnemosine`](https://github.com/Green-Cinnamon-Labs/spec-mnemosine) | AI engineering: training and improving models, frameworks; persistent latent memory | [`lab-latent-memory`](https://github.com/Green-Cinnamon-Labs/lab-latent-memory) |
+| **Hefesto** | [`spec-hefesto`](https://github.com/Green-Cinnamon-Labs/spec-hefesto) | Supervisory applications: React, Node, Python microservices, AWS | [`tep-ihm`](https://github.com/Green-Cinnamon-Labs/tep-ihm), [`tep-historian`](https://github.com/Green-Cinnamon-Labs/tep-historian) |
+| **Monjolo** | [`spec-monjolo`](https://github.com/Green-Cinnamon-Labs/spec-monjolo) | Dynamic systems simulation and numerical methods; perhaps embedded systems and a small physical plant | [`monjolo`](https://github.com/Green-Cinnamon-Labs/monjolo), [`tep-plant`](https://github.com/Green-Cinnamon-Labs/tep-plant), [`tep-optimizer`](https://github.com/Green-Cinnamon-Labs/tep-optimizer) |
+| **Gajeiro** | [`spec-gajeiro`](https://github.com/Green-Cinnamon-Labs/spec-gajeiro) | Industrial supervision with Kubernetes | [`plant-supervisor`](https://github.com/Green-Cinnamon-Labs/plant-supervisor), [`tep-lab`](https://github.com/Green-Cinnamon-Labs/tep-lab) |
+| **Sísifo** | [`spec-sisyphus`](https://github.com/Green-Cinnamon-Labs/spec-sisyphus) (private) | Blockchain, and the algorithms behind it | `sisyphus-network-router`, `-node`, `-gateway` (private) |
 
-**Status:** active development  
-**Stack:** Rust · numerical methods · OPC-UA · dynamic systems
+### The shared plant
 
-### [Tennessee Eastman CPS Lab](https://github.com/Green-Cinnamon-Labs/spec-tennessee-eastman) - industrial control research
+Hefesto, Monjolo and Gajeiro all run on the same simulated plant: the Tennessee Eastman process (Downs and Vogel, 1993), rewritten in Rust. [`spec-tennessee-eastman`](https://github.com/Green-Cinnamon-Labs/spec-tennessee-eastman) records how that system was built and is the common reference for the three lines.
 
-A multi-repository cyber-physical system built around the Tennessee Eastman Process benchmark. The project combines a Rust process simulator, industrial protocol integration, a Kubernetes supervisory operator, a web HMI, and reproducible experiment records.
-
-The [specification repository](https://github.com/Green-Cinnamon-Labs/spec-tennessee-eastman) is the entry point for architecture decisions, experiment logs, and cross-repository work. The implementation is split across [`tep-plant`](https://github.com/Green-Cinnamon-Labs/tep-plant), [`tep-operator`](https://github.com/Green-Cinnamon-Labs/tep-operator), [`tep-ihm`](https://github.com/Green-Cinnamon-Labs/tep-ihm), and [`tep-supervisor`](https://github.com/Green-Cinnamon-Labs/tep-supervisor).
-
-**Status:** active research; component integration is in progress  
-**Stack:** Rust · Go · Python · Kubernetes · OPC-UA · process control
-
-### [Latent Memory](https://github.com/Green-Cinnamon-Labs/spec-latent-memory) - persistent memory for language models
-
-An experimental research direction investigating whether conversational history can persist as a compact learned state instead of being fully reinjected at every step. The project treats memory as a deformation of a latent space and compares vector-field updates with simpler baselines.
-
-The [`spec-latent-memory`](https://github.com/Green-Cinnamon-Labs/spec-latent-memory) repository defines the research question and experimental strategy; [`lab-latent-memory`](https://github.com/Green-Cinnamon-Labs/lab-latent-memory) contains the working PyTorch and Hugging Face experiments.
-
-**Status:** early experimental research  
-**Stack:** Python · PyTorch · Transformers · representation learning
-
-### [Survey on Quantum Computing](https://github.com/Green-Cinnamon-Labs/survey-quantum-computing) - reproducible research notebook
-
-A question-driven notebook series about translating practical problems into the mathematical language of quantum computing: states, operators, spectra, preparation, and measurement. The material is organized as a progressive research trail rather than a collection of disconnected SDK demonstrations.
-
-**Status:** in progress; currently written in Portuguese  
-**Stack:** Python · Jupyter · linear algebra · quantum computing
+All work is tracked on one board, [GCLabs](https://github.com/orgs/Green-Cinnamon-Labs/projects/12), with a *Line* field.
 
 ## How the lab is organized
 
-Repository names communicate their role:
-
-- **`spec-*`** repositories hold research questions, architecture decisions, experiment records, and work that spans multiple implementations.
-- **`lab-*`** repositories contain prototypes, validation experiments, and exploratory implementations.
+- **`spec-*`** repositories are the hubs of the research lines.
+- **`lab-*`** repositories contain prototypes and exploratory experiments.
 - **Named projects** such as `monjolo` are reusable systems intended to stand on their own.
-- **`tep-*`** repositories are components of the Tennessee Eastman CPS Lab.
-- **Forks** preserve or adapt relevant upstream work; they are not presented as original Green Cinnamon Labs projects.
-
-Projects range from usable software to open research. Each repository should state its current status, known limitations, and next questions as plainly as possible.
+- **`tep-*`** repositories are components of the shared Tennessee Eastman plant and its applications.
 
 ## Collaborate
 
